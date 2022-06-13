@@ -15,7 +15,7 @@ function App() {
      id: uuidv4(),
      title: text
    }
-    
+    //pagol
   setItems([newItems, ...items])
   console.log(newItems);
   setText("")
