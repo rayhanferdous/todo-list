@@ -15,7 +15,7 @@ function App() {
      id: uuidv4(),
      title: text
    }
-    
+    //sagol
   setItems([newItems, ...items])
   console.log(newItems);
   setText("")
