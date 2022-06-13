@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hero {
+    position: absolute;
+    top: 0;
+    z-index: -999;
+}
+
+.hero img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.todo-list:last-child{
+    border-bottom: none;
+}
