@@ -687,3 +687,14 @@ video {
 .todo-list:last-child{
   border-bottom: none;
 }
+
+@media (min-width: 640px) {
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:max-w-xl {
+    max-width: 36rem;
+  }
+}

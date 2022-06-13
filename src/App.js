@@ -4,9 +4,19 @@ import Logo from './components/Logo';
 import List from './components/List';
 import {v4 as uuidv4} from 'uuid';
 
+const getLocalStroage = () => {
+  let items = localStorage.getItem('items')
+
+  if (items) {
+    return JSON.parse(localStorage.getItem('items'))
+  } else {
+    return []
+  }
+}
+
 function App() {
   const [text, setText] = useState("");
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(getLocalStroage());
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +25,7 @@ function App() {
      id: uuidv4(),
      title: text
    }
-    //sagol
+  
   setItems([newItems, ...items])
   console.log(newItems);
   setText("")
@@ -26,7 +36,7 @@ function App() {
   }
 
   useEffect(() => {
-    localStorage.setItem('items', JSON.stringify(items));
+    localStorage.setItem('items', JSON.stringify(items))
   }, [items]);
 
   return (
